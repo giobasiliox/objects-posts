@@ -91,4 +91,8 @@ button:hover{
     background-color: #a00000;
 }
 
+.hidden{
+    display: none;
+}
+
 

@@ -42,6 +42,7 @@ function storePost(title, resume, publisher, date) {
 }
 
 function showPowts(){
+document.getElementById("list").classList.remove("hidden");
 let showContent= "";
 
 posts.forEach((post, index)=>{
@@ -62,6 +63,7 @@ document.getElementById("list").innerHTML= showContent;
 }
 
 function cleanFields(){
+    
     document.getElementById("title").value="";
     document.getElementById("resume").value="";
     document.getElementById("publisher").value="";
@@ -80,7 +82,10 @@ function editPost(index){
 
 function removePost(index){
 posts.splice(index,1);
-
 showPowts();
+
+if(posts.length == 0){
+    document.getElementById("list").classList.add("hidden");
+}
 }
 
